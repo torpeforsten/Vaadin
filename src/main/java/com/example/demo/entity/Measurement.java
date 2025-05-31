@@ -9,12 +9,24 @@ public class Measurement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String type;
+
+    @Column(nullable = false)
     private Double value;
 
-    @ManyToOne
-    @JoinColumn(name = "person_id")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "person_id", nullable = false)
     private Person person;
+
+    // Constructors
+    public Measurement() {}
+
+    public Measurement(String type, Double value, Person person) {
+        this.type = type;
+        this.value = value;
+        this.person = person;
+    }
 
     // Getters and setters
     public Long getId() {

@@ -1,0 +1,16 @@
+:root {
+    --lumo-primary-color: hsl(220, 90%, 50%);
+    --lumo-base-color: #fafafa;
+    --lumo-body-text-color: #222;
+}
+
+.my-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--lumo-primary-color);
+}
+
+.my-grid {
+    border: 2px solid var(--lumo-primary-color);
+    border-radius: 10px;
+}

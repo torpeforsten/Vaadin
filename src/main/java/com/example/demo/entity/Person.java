@@ -15,6 +15,12 @@ public class Person {
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<Measurement> measurements;
 
+    public Person() {}
+
+    public Person(String name) {
+        this.name = name;
+    }
+
     // Getters and setters
     public Long getId() {
         return id;
